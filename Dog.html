@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Furry Friends Campaign</title>
+    <style>
+        #clickMe{
+            background: #D8B36E;
+            padding: 20px;
+            text-align: center;
+            width: 205px;
+            display: block;
+            border: 2px solid #000;
+        }
+        #picframe{
+            background: #D8B36E;
+            padding: 20px;
+            width: 205px;
+            display: none;
+            border: 2px solid #000;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="clickMe">
+    Đây là Mèo Cưng
+</div>
+<div id="picframe">
+    <img src="https://scontent.fhan1-1.fna.fbcdn.net/v/t1.0-9/20708085_777604062410682_5438455629562392361_n.jpg?_nc_cat=101&_nc_ht=scontent.fhan1-1.fna&oh=f483a86098644c5184d95e40266bc36e&oe=5C9D8DD2">
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#clickMe").click(function () {
+            $("img").fadeIn(5000);
+            $("#picframe").slideToggle("slow");
+        });
+    });
+</script>
+</body>
+</html>

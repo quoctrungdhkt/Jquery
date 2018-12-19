@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<h1>Hello jQuery</h1>
+<a href="#">Click to HIDE me :)</a>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dolorem doloribus ducimus eius error eum, hic iusto neque nesciunt nobis, nulla obcaecati officia provident quas quisquam quo recusandae, repellat veniam!
+</p>
+<script>
+    $("p").hide();
+    $("a").click(function (event) {
+        event.preventDefault();
+        $(this).hide('slow');
+    });
+</script>
+</body>
+</html>

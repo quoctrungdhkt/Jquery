@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #change_me {
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            font: 24px Arial;
+            background-color: #bca;
+            width: 100px;
+            border: 1px solid green;
+        }
+        #move_up #move_down #add_color #dissapear_redissapear {
+            padding: 5px;
+        }
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<button id="move_up">Move up</button>
+<button id="move_down">Move down</button>
+<button id="add_color">Add color</button>
+<button id="dissapear_redissapear">Dissapear/Re-dissapear</button>
+<div id="change_me">Make me Stuff</div>
+<script>
+    $(document).ready(function () {
+        $("#move_up").click(function () {
+            $("#change_me").animate({
+                top: 30
+            }, 200);
+        }); //end move_up
+
+        $("#move_down").click(function () {
+            $("#change_me").animate({
+                top: 500
+            }, 2000);
+        }); //end move_down
+
+        $("#add_color").click(function () {
+            $("#change_me").css({
+                "background-color": "yellow",
+                "font-weight": "border" });
+        }); //end color
+
+        $("#dissapear_redissapear").click(function () {
+            $("#change_me").toggle('slow');
+        }); //end dissapear
+        });
+</script>
+</body>
+</html>
